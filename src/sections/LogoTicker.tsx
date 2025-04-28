@@ -22,7 +22,7 @@ const logos = [
 export default function LogoTicker() {
   return (
     <section className="py-24 overflow-x-clip mx-auto max-w-6xl">
-      <div className="py-24 overflow-hidden">
+      <div className="overflow-hidden">
         <h3 className="text-center text-white/50 text-xl">Already chosen by these Market Leaders</h3>
         <div className="flex justify-center mt-12 overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
           <div className="flex gap-24 pr-24">
