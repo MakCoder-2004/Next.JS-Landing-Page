@@ -10,7 +10,7 @@ import Image from "next/image";
 export default function Footer() {
     return (
         <section className="pt-24 pb-6">
-            <div className="p-12 flex flex-col md:flex-row md:justify-between items-center gap-6">
+            <div className="md:px-12 flex flex-col md:flex-row md:justify-between items-center gap-6">
                 <div>
                     <Image src={LogoImage} alt="Layers Logo" />
                 </div>
