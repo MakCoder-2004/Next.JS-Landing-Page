@@ -23,7 +23,7 @@ const logos = [
 
 export default function LogoTicker() {
   return (
-    <section className="py-24 overflow-x-clip mx-auto max-w-6xl">
+    <section className="pt-24 overflow-x-clip mx-auto max-w-6xl">
       <div className="overflow-hidden">
         <h3 className="text-center text-white/50 text-xl mb-12">
           Already chosen by these Market Leaders
@@ -32,7 +32,7 @@ export default function LogoTicker() {
           <motion.div
             className="flex flex-none left-0 gap-24 pr-24 items-center"
             animate={{
-              x: "-50%",
+              x: "-100%",
             }}
             transition={{
               duration: 15,
@@ -40,7 +40,6 @@ export default function LogoTicker() {
               repeat: Infinity,
             }}
           >
-            {/* Double the logos for seamless looping */}
             {[...logos, ...logos].map((logo, index) => (
               <div key={`${logo.name}-${index}`} className="flex-shrink-0">
                 <Image
