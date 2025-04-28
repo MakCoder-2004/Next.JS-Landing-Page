@@ -30,12 +30,12 @@ export default function Introduction() {
   });
 
   return (
-    <section className="px-12 lg:py-20 mx-auto max-w-7xl w-full relative">
+    <section className="px-12 py-28 lg:py-40 mx-auto max-w-7xl w-full relative">
       <div className="sticky top-30 h-screen flex flex-col justify-center">
         <div className="flex justify-center">
           <Tag title="Introducing Layers" />
         </div>
-        <div className="text-5xl md:text-6xl lg:text-7xl text-center font-medium mt-10">
+        <div className="text-4xl md:text-6xl lg:text-7xl text-center font-medium mt-10">
           <motion.p>Your Creative process deserves better.</motion.p>
           <motion.p className="my-8">
             {words.map((word, index) => (
