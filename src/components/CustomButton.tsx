@@ -1,4 +1,4 @@
-import React, { HTMLAttributes } from "react";
+import React, { ButtonHTMLAttributes } from "react";
 import { cva } from "class-variance-authority";
 
 const classes = cva("border h-12 rounded-full px-6 font-medium", {
@@ -6,6 +6,9 @@ const classes = cva("border h-12 rounded-full px-6 font-medium", {
     variant: {
       primary: "bg-lime-400 text-neutral-900 border-lime-400",
       secondary: "border-white bg-transparent text-white",
+    },
+    size: {
+      sm: "h-10",
     },
   },
   defaultVariants: {
@@ -16,10 +19,11 @@ const classes = cva("border h-12 rounded-full px-6 font-medium", {
 const CustomButton = (
   props: {
     variant: "primary" | "secondary";
-  } & HTMLAttributes<HTMLButtonElement>
+    size?: "sm";
+  } & ButtonHTMLAttributes<HTMLButtonElement>
 ) => {
-  const { variant, className, ...rest } = props;
-  return <button className={classes({ variant, className })} {...rest} />;
+  const { variant, size, className, ...rest } = props;
+  return <button className={classes({ variant, className, size })} {...rest} />;
 };
 
 export default CustomButton;
