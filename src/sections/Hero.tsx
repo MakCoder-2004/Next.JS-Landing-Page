@@ -16,10 +16,10 @@ export default function Hero() {
           <Image src={designExample2Image} alt="Design Example 2" />
         </div>
         <div className="absolute left-56 top-96 hidden xl:block">
-          <Pointers name="Makrious" color="blue" />
+          <Pointers name="Makrious" color="blue" key={"Makrious"} />
         </div>
         <div className="absolute right-80 -top-4 hidden xl:block">
-          <Pointers name="Ayman" color="red" />
+          <Pointers name="Ayman" color="red" key={"Ayman"} />
         </div>
 
         {/* Main content */}
@@ -49,7 +49,7 @@ export default function Hero() {
             <input
               type="email"
               placeholder="Enter your email"
-              className="bg-transparent px-5 flex-1 outline-none"
+              className="bg-transparent px-5 flex-1 outline-none w-full"
             />
             <CustomButton
               type="submit"
