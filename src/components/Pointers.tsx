@@ -1,5 +1,5 @@
 const Pointers = (props: { name: string; color?: "blue" | "red" }) => {
-    const { name, color } = props;
+    const { name, color = "blue" } = props;
     
     return (
       <div className="relative inline-block">
