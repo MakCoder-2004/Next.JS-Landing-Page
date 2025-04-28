@@ -5,6 +5,7 @@ import Introduction from "@/sections/Introduction";
 import Features from "@/sections/Features";
 import Integrations from "@/sections/Integrations";
 import Faqs from "@/sections/Faqs";
+import CallToAction from "@/sections/CallToAction";
 
 
 export default function Home() {
@@ -17,6 +18,7 @@ export default function Home() {
       <Features/>
       <Integrations/>
       <Faqs/>
+      <CallToAction/>
     </div>
   );
 }
