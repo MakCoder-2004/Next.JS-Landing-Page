@@ -62,7 +62,7 @@ This project helped me understand:
 
 ## 🔗 Live Demo
 
-Coming soon...
+[Demo Website](https://next-js-landing-page-wheat.vercel.app/)
 
 ## 🧠 Future Plans
 
