@@ -1,4 +1,7 @@
+"use client";
+import React from "react";
 import Tag from "@/components/Tag";
+import { AnimatePresence, motion } from "framer-motion";
 
 const faqs = [
   {
@@ -29,7 +32,7 @@ const faqs = [
 ];
 
 export default function Faqs() {
-    const selectedIndex: number = 0;
+  const [selectedIndex, setSelectedIndex] = React.useState(0);
   return (
     <section className="py-24 mx-auto max-w-6xl px-12">
       <div>
@@ -46,6 +49,7 @@ export default function Faqs() {
             <div
               key={faq.question}
               className="bg-neutral-900 rounded-2xl border border-white/10 p-6"
+              onClick={() => setSelectedIndex(faqIndex)}
             >
               <div className="flex justify-between items-center">
                 <h2>{faq.question}</h2>
@@ -59,18 +63,27 @@ export default function Faqs() {
                   strokeWidth="2"
                   strokeLinecap="round"
                   strokeLinejoin="round"
-                  className={`feather feather-plus text-lime-400 flex-shrink-0 ml-auto ${selectedIndex === faqIndex ? "rotate-45": ""}`}
+                  className={`feather feather-plus text-lime-400 flex-shrink-0 ml-auto transition duration-300 ${
+                    selectedIndex === faqIndex ? "rotate-45" : ""
+                  }`}
                 >
                   <line x1="12" y1="5" x2="12" y2="19"></line>
                   <line x1="5" y1="12" x2="19" y2="12"></line>
                 </svg>
               </div>
 
-              <div className={`mt-6 ${selectedIndex === faqIndex ? "block" : "hidden"}`}>
-                <p className="text-white/50">
-                  {faq.answer}
-                </p>
-              </div>
+              <AnimatePresence>
+                {selectedIndex === faqIndex && (
+                  <motion.div
+                    className={`mt-6 overflow-hidden`}
+                    initial={{ height: 0, marginTop: 0 }}
+                    animate={{ height: "auto", marginTop: 24 }}
+                    exit={{ height: 0, marginTop: 0 }}
+                  >
+                    <p className="text-white/50 ">{faq.answer}</p>
+                  </motion.div>
+                )}
+              </AnimatePresence>
             </div>
           ))}
         </div>
