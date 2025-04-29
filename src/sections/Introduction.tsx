@@ -31,7 +31,7 @@ export default function Introduction() {
 
   return (
     <section className="px-12 py-28 lg:py-40 mx-auto max-w-7xl w-full relative">
-      <div className="sticky top-30 h-screen flex flex-col justify-center">
+      <div className="sticky top-10 md:top-20 lg:top-30 h-screen flex flex-col justify-center">
         <div className="flex justify-center">
           <Tag title="Introducing Layers" />
         </div>
