@@ -1,36 +1,77 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# SaaS Landing Page - Frontend Project
 
-## Getting Started
+This is a modern, responsive SaaS landing page built using **Next.js**, styled with **Tailwind CSS**, and animated using **Framer Motion**. It serves as a professional landing page for a Software as a Service (SaaS) product.
 
-First, run the development server:
+## 🚀 Project Purpose
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+The project was created as a hands-on learning experience to strengthen my frontend development skills. With guidance from a YouTube tutorial, this project represents my first complete frontend website and serves as a foundation for tackling more complex web applications in the future.
+
+## 🛠️ Tech Stack
+
+- **Framework**: [Next.js](https://nextjs.org/)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+- **Animations**: [Framer Motion](https://www.framer.com/motion/)
+
+## 📁 Project Structure
+
+The project is organized into reusable components and larger sections for maintainability:
+
+```
+components/
+  ├─┐ Avatar.tsx
+  ├─┐ CustomButton.tsx
+  ├─┐ FeatureCard.tsx
+  ├─┐ IntegrationColumn.tsx
+  ├─┐ KeyboardKey.tsx
+  ├─┐ Pointers.tsx
+  └─┐ Tag.tsx
+
+sections/
+  ├─┐ CallToAction.tsx
+  ├─┐ Faqs.tsx
+  ├─┐ Features.tsx
+  ├─┐ Footer.tsx
+  ├─┐ Hero.tsx
+  ├─┐ Integrations.tsx
+  ├─┐ Introduction.tsx
+  ├─┐ LogoTicker.tsx
+  └─┐ Navbar.tsx
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **components/**: Small, reusable UI elements like buttons, avatars, and tags.
+- **sections/**: Larger page sections like the Hero, Features, and Footer.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## ✨ Features
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- Fully responsive design
+- Smooth animations using Framer Motion
+- Tailwind CSS for rapid styling
+- Modular and reusable component-based structure
 
-## Learn More
+## 📚 Learning Experience
 
-To learn more about Next.js, take a look at the following resources:
+This project helped me understand:
+- Component-based architecture with React/Next.js
+- Responsive design with Tailwind CSS
+- Animation handling with Framer Motion
+- File structure and code modularity best practices
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📸 Preview
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+![Project Preview](./preview.png)
 
-## Deploy on Vercel
+## 🔗 Live Demo
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Coming soon...
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🧠 Future Plans
+
+- Add form handling and validation
+- Integrate with backend or CMS
+- Explore TypeScript best practices more deeply
+- Implement dark mode
+
+---
+
+Thanks for checking out my project! Feel free to leave feedback or suggestions to help me grow as a frontend developer.
+
