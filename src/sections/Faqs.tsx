@@ -34,7 +34,7 @@ const faqs = [
 export default function Faqs() {
   const [selectedIndex, setSelectedIndex] = React.useState(0);
   return (
-    <section className="py-24 mx-auto max-w-6xl px-12">
+    <section id="faqs" className="py-24 mx-auto max-w-6xl px-12">
       <div>
         <div className="flex justify-center">
           <Tag title="FAQs" />

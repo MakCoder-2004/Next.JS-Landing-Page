@@ -1,29 +1,41 @@
 import React, { ButtonHTMLAttributes } from "react";
-import { cva } from "class-variance-authority";
+import { cva, VariantProps } from "class-variance-authority";
 
-const classes = cva("border h-12 rounded-full px-6 font-medium", {
-  variants: {
-    variant: {
-      primary: "bg-lime-400 text-neutral-900 border-lime-400",
-      secondary: "border-white bg-transparent text-white",
+const buttonClasses = cva(
+  "border h-12 rounded-full px-6 font-medium transition duration-300",
+  {
+    variants: {
+      variant: {
+        primary: "bg-lime-400 text-neutral-900 border-lime-400 hover:bg-lime-500",
+        secondary: "border-white bg-transparent text-white hover:bg-white hover:text-neutral-900 hover:border-white",
+      },
+      size: {
+        default: "h-12",
+        sm: "h-10 px-5 text-sm",
+      },
     },
-    size: {
-      sm: "h-10",
+    defaultVariants: {
+      variant: "primary",
+      size: "default",
     },
-  },
-  defaultVariants: {
-    variant: "primary",
-  },
-});
+  }
+);
 
-const CustomButton = (
-  props: {
-    variant: "primary" | "secondary";
-    size?: "sm";
-  } & ButtonHTMLAttributes<HTMLButtonElement>
-) => {
-  const { variant, size, className, ...rest } = props;
-  return <button className={classes({ variant, className, size })} {...rest} />;
+type ButtonProps = VariantProps<typeof buttonClasses> & 
+  ButtonHTMLAttributes<HTMLButtonElement>;
+
+const CustomButton = ({
+  variant,
+  size,
+  className,
+  ...rest
+}: ButtonProps) => {
+  return (
+    <button 
+      className={buttonClasses({ variant, size, className })} 
+      {...rest} 
+    />
+  );
 };
 
 export default CustomButton;

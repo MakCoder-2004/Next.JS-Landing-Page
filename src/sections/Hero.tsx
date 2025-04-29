@@ -39,7 +39,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="mx-auto py-12 overflow-x-clip px-4">
+    <section id="/" className="mx-auto py-12 overflow-x-clip px-4">
       {/* Background elements */}
       <div className="relative">
         <motion.div

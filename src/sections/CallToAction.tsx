@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 export default function CallToAction() {
   return (
-    <section className="py-24">
+    <section className="py-24" id="#call-to-action">
       <div className="overflow-x-clip p-4 flex group">
         <motion.div 
           className="flex flex-none gap-16 text-7xl md:text-8xl font-medium "
